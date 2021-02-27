@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.scss';
+import db from './db';
+import { useState } from 'react';
+import Home from './components/Home/Home';
+import LevelOne from './components/LevelOne/LevelOne';
 
-function App() {
+const App = () => {
+
+  const [state, setState] = useState({currentPageNum: 0, toolsScannerCooldownRemainingSeconds: 0});
+
+  const setStateProp = (stateUpdateObj) => {
+    setState((prevState) => {
+      return {
+        ...prevState,
+        ...stateUpdateObj,
+      };
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {state.currentPageNum === 0 ? <Home state={state} setStateProp={setStateProp} /> : null}
+      {state.currentPageNum === 1 ? <LevelOne state={state} setStateProp={setStateProp} /> : null}
     </div>
   );
 }
