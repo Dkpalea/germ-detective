@@ -6,7 +6,7 @@ import LevelOne from './components/LevelOne/LevelOne';
 
 const App = () => {
 
-  const [state, setState] = useState({currentPageNum: 0, toolsScannerCooldownRemainingSeconds: 0});
+  const [state, setState] = useState(db);
 
   const setStateProp = (stateUpdateObj) => {
     setState((prevState) => {

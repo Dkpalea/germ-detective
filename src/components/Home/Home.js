@@ -1,16 +1,19 @@
+import home from '../../assets/images/home.png';
 
 const Home = ({state, setStateProp}) => {
 
 
-  const addToCount = () => {
-    setStateProp({toolsScannerCooldownRemainingSeconds: state.toolsScannerCooldownRemainingSeconds += 1});
+  const navToLevel1 = () => {
+    setStateProp({currentPageNum: 1});
   };
 
 
   return (
     <div className="home-page">
-      {state.toolsScannerCooldownRemainingSeconds}
-      <button onClick={() => addToCount()}>addToCount</button>
+      <div className="content-container">
+        <button onClick={() => navToLevel1()}>Start!</button>
+        <img className="background" src={home} />
+      </div>
     </div>
   );
 }
