@@ -6,16 +6,16 @@ import LevelOne from './components/LevelOne/LevelOne';
 
 const App = () => {
 
-  const [state, setState] = useState(db);
+  const [state, setStateProp] = useState(db);
 
-  const setStateProp = (stateUpdateObj) => {
-    setState((prevState) => {
-      return {
-        ...prevState,
-        ...stateUpdateObj,
-      };
-    });
-  };
+  // const setStateProp = (stateUpdateObj) => {
+  //   setState((prevState) => {
+  //     return {
+  //       ...prevState,
+  //       ...stateUpdateObj,
+  //     };
+  //   });
+  // };
 
   return (
     <div className="app">

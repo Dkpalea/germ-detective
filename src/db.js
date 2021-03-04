@@ -3,9 +3,9 @@ const db = {
   // [0-2]
   currentPageNum: 0,
   // [0-5]
-  toolsScannerCooldownRemainingSeconds: 0,
+  scannerCooldownRemainingSeconds: 0,
   // [0-3]
-  toolsScannerUseRemainingSeconds: 0,
+  scannerUseRemainingSeconds: 0,
   sprayIsSelected: false,
   sprayIsActive: false,
   handSoapIsSelected: false,
