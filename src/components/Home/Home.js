@@ -6,9 +6,9 @@ import click from '../../assets/audio/click.wav';
 const Home = ({state, setStateProp}) => {
 
 
-  const bgmPlayer = new Audio(bgm);
-  bgmPlayer.volume = 0.4;
-  bgmPlayer.loop = true;
+  // const bgmPlayer = new Audio(bgm);
+  // bgmPlayer.volume = 0.4;
+  // bgmPlayer.loop = true;
   const clickPlayer = new Audio(click);
 
 
@@ -20,7 +20,7 @@ const Home = ({state, setStateProp}) => {
   return (
     <div className="home-page">
       <div className="content-container">
-        <button onClick={() => {navToLevel1(); bgmPlayer.play(); clickPlayer.play();}}>Start!</button>
+        <button onClick={() => {navToLevel1(); /*bgmPlayer.play();*/ clickPlayer.play();}}>Start!</button>
         <img className="background" src={home} />
       </div>
     </div>
