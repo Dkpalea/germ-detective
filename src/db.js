@@ -6,8 +6,8 @@ const db = {
   scannerCooldownRemainingSeconds: 0,
   // [0-3]
   scannerUseRemainingSeconds: 0,
-  sprayTopIsSelected: false,
-  sprayTopIsActive: false,
+  sprayIsSelected: false,
+  sprayIsActive: false,
   handSoapIsSelected: false,
   handSoapIsActive: false,
   faceMaskIsSelected: false,
@@ -17,83 +17,83 @@ const db = {
   germLocations0Left: 285,
   germLocations0Top: 340,
   germLocations0IsAlive: false,
-  germLocations0IsActive: true,
+  germLocations0IsActive: false,
   // desk 1 center
   germLocations1Left: 250,
   germLocations1Top: 305,
   germLocations1IsAlive: false,
-  germLocations1IsActive: true,
+  germLocations1IsActive: false,
   // chair 2 top
   germLocations2Left: 485,
   germLocations2Top: 340,
   germLocations2IsAlive: false,
-  germLocations2IsActive: true,
-  // desk 2 center
+  germLocations2IsActive: false,
+  // chalkboard
   germLocations3Left: 545,
   germLocations3Top: 240,
   germLocations3IsAlive: false,
-  germLocations3IsActive: true,
+  germLocations3IsActive: false,
   // chair 3 top
   germLocations4Left: 685,
   germLocations4Top: 340,
   germLocations4IsAlive: false,
-  germLocations4IsActive: true,
+  germLocations4IsActive: false,
   // desk 3 center
   germLocations5Left: 625,
   germLocations5Top: 310,
   germLocations5IsAlive: false,
-  germLocations5IsActive: true,
+  germLocations5IsActive: false,
   // trash can
   germLocations6Left: 825,
   germLocations6Top: 305,
   germLocations6IsAlive: false,
-  germLocations6IsActive: true,
-  // drawer handle left
+  germLocations6IsActive: false,
+  // floor
   germLocations7Left: 920,
   germLocations7Top: 400,
   germLocations7IsAlive: false,
-  germLocations7IsActive: true,
+  germLocations7IsActive: false,
   // drawer handle right
   germLocations8Left: 925,
   germLocations8Top: 255,
   germLocations8IsAlive: false,
-  germLocations8IsActive: true,
+  germLocations8IsActive: false,
   // books on shelf
   germLocations9Left: 30,
   germLocations9Top: 200,
   germLocations9IsAlive: false,
-  germLocations9IsActive: true,
+  germLocations9IsActive: false,
   // student 1 germs
   // LH
-  germLocations10Left: 0,
-  germLocations10Top: 0,
+  germLocations10Left: 60,
+  germLocations10Top: 395,
   germLocations10IsAlive: false,
   germLocations10IsActive: false,
   // RH
-  germLocations11Left: 0,
-  germLocations11Top: 0,
+  germLocations11Left: 130,
+  germLocations11Top: 395,
   germLocations11IsAlive: false,
   germLocations11IsActive: false,
   // student 2 germs
   // LH
-  germLocations12Left: 0,
-  germLocations12Top: 0,
+  germLocations12Left: 355,
+  germLocations12Top: 340,
   germLocations12IsAlive: false,
   germLocations12IsActive: false,
   // RH
-  germLocations13Left: 0,
-  germLocations13Top: 0,
+  germLocations13Left: 420,
+  germLocations13Top: 340,
   germLocations13IsAlive: false,
   germLocations13IsActive: false,
   // student 3 germs
   // LH
-  germLocations14Left: 0,
-  germLocations14Top: 0,
+  germLocations14Left: 725,
+  germLocations14Top: 390,
   germLocations14IsAlive: false,
   germLocations14IsActive: false,
   // RH
-  germLocations15Left: 0,
-  germLocations15Top: 0,
+  germLocations15Left: 795,
+  germLocations15Top: 390,
   germLocations15IsAlive: false,
   germLocations15IsActive: false,
 };
