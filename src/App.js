@@ -3,6 +3,7 @@ import db from './db';
 import { useState } from 'react';
 import Home from './components/Home/Home';
 import LevelOne from './components/LevelOne/LevelOne';
+import SnackbarProvider from 'react-simple-snackbar'
 
 const App = () => {
 
@@ -18,10 +19,12 @@ const App = () => {
   // };
 
   return (
-    <div className="app">
-      {state.currentPageNum === 0 ? <Home state={state} setStateProp={setStateProp} /> : null}
-      {state.currentPageNum === 1 ? <LevelOne state={state} setStateProp={setStateProp} /> : null}
-    </div>
+    <SnackbarProvider>
+      <div className="app">
+        {state.currentPageNum === 0 ? <Home state={state} setStateProp={setStateProp} /> : null}
+        {state.currentPageNum === 1 ? <LevelOne state={state} setStateProp={setStateProp} /> : null}
+      </div>
+    </SnackbarProvider>
   );
 }
 
