@@ -65,18 +65,18 @@ const db = {
   germLocations9IsActive: false,
   // student 1 germs
   // LH
-  germLocations10Left: 60,
-  germLocations10Top: 395,
+  germLocations10Left: 55,
+  germLocations10Top: 385,
   germLocations10IsAlive: false,
   germLocations10IsActive: false,
   // RH
-  germLocations11Left: 130,
-  germLocations11Top: 395,
+  germLocations11Left: 125,
+  germLocations11Top: 385,
   germLocations11IsAlive: false,
   germLocations11IsActive: false,
   // student 2 germs
   // LH
-  germLocations12Left: 355,
+  germLocations12Left: 350,
   germLocations12Top: 340,
   germLocations12IsAlive: false,
   germLocations12IsActive: false,
@@ -88,12 +88,12 @@ const db = {
   // student 3 germs
   // LH
   germLocations14Left: 725,
-  germLocations14Top: 390,
+  germLocations14Top: 385,
   germLocations14IsAlive: false,
   germLocations14IsActive: false,
   // RH
   germLocations15Left: 795,
-  germLocations15Top: 390,
+  germLocations15Top: 385,
   germLocations15IsAlive: false,
   germLocations15IsActive: false,
 };
