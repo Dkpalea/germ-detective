@@ -21,7 +21,7 @@ const App = () => {
   return (
     <SnackbarProvider>
       <div className="app">
-        {state.currentPageNum === 0 ? <Home state={state} setStateProp={setStateProp} /> : null}
+        {state.currentPageNum < 1 || state.currentPageNum === 2 ? <Home state={state} setStateProp={setStateProp} /> : null}
         {state.currentPageNum === 1 ? <LevelOne state={state} setStateProp={setStateProp} /> : null}
       </div>
     </SnackbarProvider>

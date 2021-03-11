@@ -18,7 +18,8 @@ import spraySound from '../../assets/audio/spray.mp3';
 import bubbleSound from '../../assets/audio/bubble.mp3';
 import notifSound from '../../assets/audio/notif.mp3';
 import yaySound from '../../assets/audio/yay.mp3';
-
+import laughSound from '../../assets/audio/laugh.mp3';
+import onoSound from '../../assets/audio/ono.mp3';
 
 import { useEffect, useState } from 'react';
 import { useSnackbar } from 'react-simple-snackbar'
@@ -118,13 +119,19 @@ const LevelOne = ({state, setStateProp}) => {
 
   // audio setup
   const clickPlayer = new Audio(clickSound);
+  clickPlayer.volume = 0.3;
   const scannerPlayer = new Audio(scannerSound);
-  scannerPlayer.volume = 0.3;
+  scannerPlayer.volume = 0.2;
   const sprayPlayer = new Audio(spraySound);
   const bubblePlayer = new Audio(bubbleSound);
   const notifPlayer = new Audio(notifSound);
+  notifPlayer.volume = 0.8;
   const yayPlayer = new Audio(yaySound);
-  yayPlayer.volume = 0.5;
+  yayPlayer.volume = 0.4;
+  const laughPlayer = new Audio(laughSound);
+  laughPlayer.volume = 0.02;
+  const onoPlayer = new Audio(onoSound);
+  onoPlayer.volume = 0.6;
 
   // scannerSound setup
   const scannerActiveTimeSec = 3;
@@ -203,8 +210,25 @@ const LevelOne = ({state, setStateProp}) => {
       case 'yay':
         yayPlayer.play();
         break;
+      case 'laugh':
+        laughPlayer.play();
+        break;
+      case 'ono':
+        onoPlayer.play();
+        break;
     }
   };
+
+  // setup germ laugh timer on first mount
+  useEffect(() => {
+    // germ laugh timer
+    setTimeout(() => {
+      playAudio('laugh');
+    }, 2500);
+    setInterval(() => {
+      playAudio('laugh');
+    }, 35000);
+  }, []);
 
   const resetAudio = (name) => {
     switch (name) {
@@ -252,13 +276,16 @@ const LevelOne = ({state, setStateProp}) => {
       const attemptedKill = (type) => {
         if (type==='soapForSurface') {
           openSnackbar('Hand soap is for our hands!');
+          playAudio('ono');
         } else {
           openSnackbar('Disinfectant spray is for surfaces!');
+          playAudio('ono');
         }
       };
 
       if (!state.handSoapIsSelected && !state.sprayIsSelected) {
         openSnackbar('Kill germs using soap 🧼 or spray 💨...');
+        playAudio('ono');
       } else if ((germNum >= 10) && (germNum <= 15)) {
       //  on hands
         if (state.handSoapIsSelected) {
@@ -286,6 +313,7 @@ const LevelOne = ({state, setStateProp}) => {
     if (/*!state[`${toolName}IsSelected`] &&*/ state.scannerUseRemainingSeconds===0) {
       switch (toolName) {
         case 'handSoap':
+          playAudio('click');
           setStateProp((prevState) => {
             return {
               ...prevState,
@@ -295,6 +323,7 @@ const LevelOne = ({state, setStateProp}) => {
           });
           break;
         case 'spray':
+          playAudio('click');
           setStateProp((prevState) => {
             return {
               ...prevState,
